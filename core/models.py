@@ -16,3 +16,6 @@ class Evento(models.Model):
 
     def __str__(self): #Defini que o nome dado ao Evento seja o nome exibido nele mesmo quando aberto no django admin
         return self.titulo
+
+    def get_data_evento(self):
+        return self.data_evento.strftime('%d/%m/%Y %H:%M Horas')
